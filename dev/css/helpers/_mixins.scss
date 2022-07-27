@@ -1,0 +1,41 @@
+// Breakpoints
+$mobile:360px;
+$iphone:375px;
+$pixel:411px;
+$tablet: 768px;
+$laptop: 1366px;
+$desktop: 1920px;
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin iphone {
+  @media screen and (max-width: $iphone) {
+    @content;
+  }
+}
+@mixin pixel {
+  @media screen and (max-width: $pixel) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media screen and (max-width: $desktop) {
+    @content;
+  }
+}
+// Animations
+@mixin anim($time) {
+  animation: $time all ease-in-out;
+}
