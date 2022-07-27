@@ -1,0 +1,28 @@
+.fp-sr-only{
+  overflow: visible;
+}
+#fp-nav ul li a span{
+  border-radius: 0;
+  &:hover{
+    border-radius: 0;
+  }
+}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  height: 12px;
+  width: 12px;
+  margin: -6px 0 0 -6px;
+  border-radius: 0;
+}
+#fp-nav ul li a, .fp-slidesNav ul li a {
+  height: 4rem;
+}
+#fp-nav ul li a.active span{
+  height: 4rem;
+}
+#fp-nav.fp-right {
+  right: 2rem;
+}
+#fp-nav ul li, .fp-slidesNav ul li {
+  width: 1rem;
+  height: 3rem;
+}

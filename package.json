@@ -19,6 +19,7 @@
     "sass": "^1.47.0"
   },
   "dependencies": {
+    "fullpage.js": "^4.0.9",
     "readable-stream": "^3.6.0"
   }
 }
