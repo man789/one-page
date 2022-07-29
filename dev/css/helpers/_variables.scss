@@ -1,10 +1,11 @@
 // Font
 
 // Light || Dark Theme Colors
-$color-black: rgb(0,0,0);
-$color-white: rgb(255,255,255);
-$color-gray-light: rgba($color-white, .15);
-$color-gray-dark: rgba($color-black, .15);
+$color-black: #232323;
+$color-white: white;
+$color-blue: #41D1B9;
+$color-grey: #D5D9DC;
+
 :root {
   --color-page-background: #{$color-white};
   --color-text: #{$color-black};

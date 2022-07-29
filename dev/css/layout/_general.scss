@@ -1,12 +1,18 @@
 // Light || Dark Theme Colors
 .dark__light{
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 4rem;
+  right: 2rem;
   cursor: pointer;
+  z-index: 6;
   svg{
     width: fit-content;
     height: fit-content;
   }
 }
 // General
+.wrapper{
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
