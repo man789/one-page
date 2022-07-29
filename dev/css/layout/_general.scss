@@ -1,7 +1,7 @@
 // Light || Dark Theme Colors
 .dark__light{
   position: fixed;
-  top: 4rem;
+  top: 125px;
   right: 2rem;
   cursor: pointer;
   z-index: 6;
@@ -11,8 +11,20 @@
   }
 }
 // General
+body{
+  font-family: $altavia-font;
+  scroll-behavior: smooth;
+}
 .wrapper{
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: inherit;
+  @include trans(.3s);
+}
+.color-blue{
+  color: #41D1B9;
 }

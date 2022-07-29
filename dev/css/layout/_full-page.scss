@@ -12,6 +12,7 @@
 }
 #fp-nav ul li a.active span{
   height: 4rem;
+  background-color: $color-blue;
 }
 #fp-nav.fp-right {
   right: 2rem;
@@ -33,7 +34,7 @@
   height: 40%;
   width: 4px;
   border: 0;
-  background: #333;
+  background: var(--color-text);
   left: 50%;
   top: 50%;
   margin: -2px 0 0 -2px;

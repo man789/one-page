@@ -1,10 +1,12 @@
 // Font
-
+$altavia-font: altavia;
 // Light || Dark Theme Colors
 $color-black: #232323;
 $color-white: white;
 $color-blue: #41D1B9;
 $color-grey: #D5D9DC;
+$color-dark-bg: #171717;
+$color-grey-bg: #979797;
 
 :root {
   --color-page-background: #{$color-white};

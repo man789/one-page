@@ -36,6 +36,6 @@ $desktop: 1920px;
   }
 }
 // Animations
-@mixin anim($time) {
-  animation: $time all ease-in-out;
+@mixin trans($time) {
+  transition: $time all ease-in-out;
 }

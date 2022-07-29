@@ -21,6 +21,7 @@ var myFullpage = new fullpage('#fullpage', {
 	showActiveTooltip: false,
 	slidesNavigation: false,
 	slidesNavPosition: 'bottom',
+	anchors:['header', 'discover', 'service', 'client'],
 
 	// Scrolling
 	css3: true,
@@ -70,7 +71,6 @@ var myFullpage = new fullpage('#fullpage', {
 	// Custom selectors
 	sectionSelector: '.section',
 	slideSelector: '.slide',
-
 	lazyLoading: true,
 	observer: true,
 	credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
