@@ -15,11 +15,6 @@
       margin: 0 0 50px 0;
     }
   }
-  &__page--down{
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-  }
 }
 
 .discover__content{
@@ -103,11 +98,6 @@
       margin: 0 0 50px 0;
     }
   }
-  &__page--down{
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-  }
 }
 
 .service__content{
@@ -172,6 +162,7 @@
       display: flex;
       justify-content: flex-end;
       align-items: flex-start;
+      gap: 0.83rem;
     }
     p{
       width: 460px;
@@ -180,11 +171,6 @@
       line-height: 1.625rem;
       margin: 0 0 50px auto;
     }
-  }
-  &__page--down{
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
   }
 }
 .client__content{

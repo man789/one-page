@@ -30,21 +30,28 @@
       font-size: 1.375rem;
     }
   }
-  &__social{
-    position: absolute;
-    bottom: 2rem;
-    left: 2rem;
-    a{
-      margin-right: 3.125rem;
-      img{
-        width: 25px;
-        height: 25px;
-      }
+}
+
+// Socials and Page Scroll
+.social{
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  a{
+    margin-right: 3.125rem;
+    img{
+      width: 25px;
+      height: 25px;
     }
   }
-  &__page--down{
-    position: absolute;
-    bottom: 2rem;
-    right: 2rem;
+}
+.page__down{
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+}
+.client{
+  .page__down{
+    transform: rotate(180deg);
   }
 }

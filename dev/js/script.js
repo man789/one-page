@@ -6,12 +6,78 @@ switchThemeBtn.addEventListener('click', () =>{
   if (body.classList.contains('dark')) {
     switchThemeBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="#ffe53b" xmlns="http://www.w3.org/2000/svg"><path d="M5.5 10a4.5 4.5 0 119 0 4.5 4.5 0 01-9 0z"/>
     <path fill-rule="evenodd" d="M10.202 2.28a.25.25 0 00-.404 0l-.91 1.255a.25.25 0 01-.334.067L7.232 2.79a.25.25 0 00-.374.155l-.36 1.508a.25.25 0 01-.282.189l-1.532-.244a.25.25 0 00-.286.286l.244 1.532a.25.25 0 01-.189.282l-1.508.36a.25.25 0 00-.155.374l.812 1.322a.25.25 0 01-.067.333l-1.256.91a.25.25 0 000 .405l1.256.91a.25.25 0 01.067.334l-.812 1.322a.25.25 0 00.155.374l1.508.36a.25.25 0 01.19.282l-.245 1.532a.25.25 0 00.286.286l1.532-.244a.25.25 0 01.282.189l.36 1.508a.25.25 0 00.374.155l1.322-.812a.25.25 0 01.333.067l.91 1.256a.25.25 0 00.405 0l.91-1.256a.25.25 0 01.334-.067l1.322.812a.25.25 0 00.374-.155l.36-1.508a.25.25 0 01.282-.19l1.532.245a.25.25 0 00.286-.286l-.244-1.532a.25.25 0 01.189-.282l1.508-.36a.25.25 0 00.155-.374l-.812-1.322a.25.25 0 01.067-.333l1.256-.91a.25.25 0 000-.405l-1.256-.91a.25.25 0 01-.067-.334l.812-1.322a.25.25 0 00-.155-.374l-1.508-.36a.25.25 0 01-.19-.282l.245-1.532a.25.25 0 00-.286-.286l-1.532.244a.25.25 0 01-.282-.189l-.36-1.509a.25.25 0 00-.374-.154l-1.322.812a.25.25 0 01-.333-.067l-.91-1.256zM10 4.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11z" clip-rule="evenodd"/>
-    </svg>`
+    </svg>`;
   }else{
     switchThemeBtn.innerHTML = `<svg width="20" height="20" viewBox="0 0 20 20" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.002 8.002 0 1010.586 10.586z"/>
-    </svg>`
+    </svg>`;
   }
 });
+// --------------------------
+
+// Image Light/Dark
+let logoAltavia = document.querySelector('.logo__altavia');
+switchThemeBtn.addEventListener('click', () =>{
+	if (body.classList.contains('dark')) {
+		logoAltavia.src = logoAltavia.src.replace('altavia-logo', 'altavia-logo-dark');
+	}else{
+		logoAltavia.src = logoAltavia.src.replace('altavia-logo-dark', 'altavia-logo');
+	};
+});
+let instagram = document.querySelectorAll('.instagram');
+let facebook = document.querySelectorAll('.facebook');
+let linkedin = document.querySelectorAll('.linkedin');
+// function Social(name) {
+// 	for (let i = 0; i < name.length; i++) {
+// 		if (body.classList.contains('dark')) {
+// 			name[i].src = name[i].src.replace('name', 'name-dark');
+// 		}else{
+// 			name[i].src = name[i].src.replace('name-dark', 'name');
+// 		};
+// 	}
+// }
+// switchThemeBtn.addEventListener('click', () =>{
+// 	Social(instagram);
+// 	Social(facebook);
+// 	Social(linkedin);
+// });
+for (let i = 0; i < instagram.length; i++) {
+	switchThemeBtn.addEventListener('click', () =>{
+		if (body.classList.contains('dark')) {
+			instagram[i].src = instagram[i].src.replace('instagram', 'instagram-dark');
+		}else{
+			instagram[i].src = instagram[i].src.replace('instagram-dark', 'instagram');
+		};
+	});
+}
+for (let i = 0; i < facebook.length; i++) {
+	switchThemeBtn.addEventListener('click', () =>{
+		if (body.classList.contains('dark')) {
+			facebook[i].src = facebook[i].src.replace('facebook', 'facebook-dark');
+		}else{
+			facebook[i].src = facebook[i].src.replace('facebook-dark', 'facebook');
+		};
+	});
+}
+for (let i = 0; i < linkedin.length; i++) {
+	switchThemeBtn.addEventListener('click', () =>{
+		if (body.classList.contains('dark')) {
+			linkedin[i].src = linkedin[i].src.replace('linkedin', 'linkedin-dark');
+		}else{
+			linkedin[i].src = linkedin[i].src.replace('linkedin-dark', 'linkedin');
+		};
+	});
+}
+let clientImg = document.querySelectorAll('.client__img');
+for (let i = 0; i < clientImg.length; i++) {
+	switchThemeBtn.addEventListener('click', () =>{
+		if (body.classList.contains('dark')) {
+			clientImg[i].src = clientImg[i].src.replace('light', 'dark');
+		}else{
+			clientImg[i].src = clientImg[i].src.replace('dark', 'light');
+		};
+	});
+}
+
 // --------------------------
 
 var myFullpage = new fullpage('#fullpage', {
