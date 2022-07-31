@@ -128,8 +128,9 @@ var myFullpage = new fullpage('#fullpage', {
 	],
 	verticalCentered: true,
 	fixedElements: '#header, .footer',
-	responsiveWidth: 0,
-	responsiveHeight: 0,
+	// Active Plugin on responsive design
+	responsiveWidth: 768,
+	responsiveHeight: 700,
 	responsiveSlides: false,
 	parallax: false,
 	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
