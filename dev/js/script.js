@@ -14,6 +14,23 @@ switchThemeBtn.addEventListener('click', () =>{
 });
 // --------------------------
 
+// Burger Nav
+let burger = document.querySelector('.nav__burger');
+let nav = document.querySelector('.main__nav');
+let logo = document.querySelector('.main__nav__logo');
+let link = document.querySelector('.main__nav__links');
+let lang = document.querySelector('.main__nav__lang');
+	burger.addEventListener('click', () =>{
+		nav.classList.toggle('nav--activ');
+		logo.classList.toggle('nav--activ');
+		link.classList.toggle('nav--activ');
+		lang.classList.toggle('nav--activ');
+		modalVideo.classList.remove('animationVideo');
+		video.innerHTML = ''
+	});
+// 
+
+
 // Image Light/Dark
 let logoAltavia = document.querySelector('.logo__altavia');
 switchThemeBtn.addEventListener('click', () =>{
@@ -80,6 +97,51 @@ for (let i = 0; i < clientImg.length; i++) {
 
 // --------------------------
 
+// Video Activation
+let btnVideo = document.querySelector('.header__cta');
+let modalVideo = document.querySelector('.header__video');
+let video = document.querySelector('.video');
+let modalVideoClose = document.querySelector('.header__video--close');
+btnVideo.addEventListener('click', () =>{
+	modalVideo.classList.add('animationVideo');
+	video.innerHTML = '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/5DtBLaS_UJ8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+});
+modalVideoClose.addEventListener('click', () =>{
+	modalVideo.classList.remove('animationVideo');
+	video.innerHTML = ''
+});
+// --------------------------
+
+// Anchors Rename
+let anchors = document.querySelectorAll('.anchors');
+window.addEventListener('resize', () => {
+	if (window.innerWidth < 768 || window.innerHeight < 825) {
+		anchors[0].href = '#discoverMobile'
+		anchors[1].href = '#serviceMobile'
+		anchors[2].href = '#clientMobile'
+		anchors[3].href = '#headerMobile'
+  } else {
+		anchors[0].href = '#discover'
+		anchors[1].href = '#service'
+		anchors[2].href = '#client'
+		anchors[3].href = '#header'
+  }
+});
+window.addEventListener('load', () => {
+	if (window.innerWidth < 768 || window.innerHeight < 825) {
+		anchors[0].href = '#discoverMobile'
+		anchors[1].href = '#serviceMobile'
+		anchors[2].href = '#clientMobile'
+		anchors[3].href = '#headerMobile'
+  } else {
+		anchors[0].href = '#discover'
+		anchors[1].href = '#service'
+		anchors[2].href = '#client'
+		anchors[3].href = '#header'
+  }
+});
+// --------------------------
+
 var myFullpage = new fullpage('#fullpage', {
 	// Navigation
 	navigation: true,
@@ -87,7 +149,7 @@ var myFullpage = new fullpage('#fullpage', {
 	showActiveTooltip: false,
 	slidesNavigation: false,
 	slidesNavPosition: 'bottom',
-	anchors:['header', 'discover', 'service', 'client'],
+	anchors:['header', 'discover', 'service', 'client', 'footer'],
 
 	// Scrolling
 	css3: true,
@@ -130,7 +192,7 @@ var myFullpage = new fullpage('#fullpage', {
 	fixedElements: '#header, .footer',
 	// Active Plugin on responsive design
 	responsiveWidth: 768,
-	responsiveHeight: 700,
+	responsiveHeight: 825,
 	responsiveSlides: false,
 	parallax: false,
 	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
@@ -140,7 +202,7 @@ var myFullpage = new fullpage('#fullpage', {
 	slideSelector: '.slide',
 	lazyLoading: true,
 	observer: true,
-	credits: { enabled: false, label: 'Made with fullPage.js', position: 'right'},
+	credits: { enabled: false, label: 'Made with fun', position: 'right'},
 
 	// Events
 	beforeLeave: function(origin, destination, direction, trigger){},

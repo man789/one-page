@@ -9,7 +9,7 @@
 </head>
 <body class="body">
   <nav class="main__nav">
-    <div>
+    <div class="main__nav__logo">
       <a href="#">
         <img src="img/altavia-logo.svg" alt="Altavia Logo" class="logo__altavia">
       </a>
@@ -21,12 +21,19 @@
       <a href="#" class="main__nav__link">Blog</a>
       <a href="#" class="main__nav__link">Contact</a>
     </div>
-    <div><a href="#">EN</a></div>
+    <div class="main__nav__lang">
+      <a href="#">EN</a>
+    </div>
   </nav>
+  <div class="nav__burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
   <div id="fullpage">
-    <div class="section header" data-anchor="header">
+    <div class="section header" data-anchor="header" id="headerMobile">
       <div class="header__content wrapper">
-        <h1>We are a 360 agency
+        <h1>We are a <span>360 agency</span>
           <span>dedicated to simplicity</span>
         </h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis blandit turpis cursus in hac. Id diam maecenas ultricies mi eget mauris pharetra. Facilisi nullam vehicula ipsum a.
@@ -44,10 +51,10 @@
         <a href="#"><img src="img/linkedin.svg" alt="linkedin" class="linkedin"></a>
       </div>
       <div class="page__down">
-        <a href="#discover"><img src="img/page-down.svg" alt="Page Down"></a>
+        <a href="#discover" class="anchors"><img src="img/page-down.svg" alt="Page Down"></a>
       </div>
     </div>
-    <div class="section discover" data-anchor="discover">
+    <div class="section discover" data-anchor="discover" id="discoverMobile">
       <div class="discover__title wrapper">
         <h2>Discover our <span class="color-blue">latest works</span></h2>
         <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
@@ -86,10 +93,10 @@
         <a href="#"><img src="img/linkedin.svg" alt="linkedin" class="linkedin"></a>
       </div>
       <div class="page__down">
-        <a href="#service"><img src="img/page-down.svg" alt="Page Down"></a>
+        <a href="#service" class="anchors"><img src="img/page-down.svg" alt="Page Down"></a>
       </div>
     </div>
-    <div class="section service" data-anchor="service">
+    <div class="section service" data-anchor="service" id="serviceMobile">
       <div class="service__title wrapper">
         <h2>How can we <span class="color-blue">help you?</span></h2>
         <p>Do you believe in collaboration and meaningful connections?</p>
@@ -168,10 +175,10 @@
         <a href="#"><img src="img/linkedin.svg" alt="linkedin" class="linkedin"></a>
       </div>
       <div class="page__down">
-        <a href="#client"><img src="img/page-down.svg" alt="Page Down"></a>
+        <a href="#client" class="anchors"><img src="img/page-down.svg" alt="Page Down"></a>
       </div>
     </div>
-    <div class="section client" data-anchor="client">
+    <div class="section client" data-anchor="client" id="clientMobile">
       <div class="client__content wrapper">
         <div>
           <img src="img/client/light/proximus.svg" alt="Proximus" class="client__img">
@@ -238,7 +245,7 @@
         </div>
       </div>
       <div class="client__title wrapper">
-        <h2>How can we <span class="color-blue">help you?</span></h2>
+        <h2>Our <span class="color-blue">clients</span></h2>
         <p>Do you believe in collaboration and meaningful connections?</p>
       </div>
       <div class="social">
@@ -247,13 +254,20 @@
         <a href="#"><img src="img/linkedin.svg" alt="linkedin" class="linkedin"></a>
       </div>
       <div class="page__down">
-        <a href="#header"><img src="img/page-down.svg" alt="Page Down"></a>
+        <a href="#header" class="anchors"><img src="img/page-down.svg" alt="Page Down"></a>
       </div>
     </div>
   </div>
   <div class="dark__light">
     <svg width="20" height="20" viewBox="0 0 20 20" fill="#000000" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.002 8.002 0 1010.586 10.586z"/>
     </svg>
+  </div>
+  <div class="header__video">
+    <div class="video"></div>
+    <div class="header__video--close">
+      <span></span>
+      <span></span>
+    </div>
   </div>
 <!-- This following line is optional. Only necessary if you use the option css3:false and you want to use other easing effects rather than "easeInOutCubic". -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/vendors/easings.min.js" integrity="sha512-SrKslwu6IjHEo/8mAOtkoUOT3MzHCEOFWktrC8BNtjPuBBYLYjg1y/Marat34uYfOfxDMLEwy8DLArWEVc2i+w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

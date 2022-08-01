@@ -7,7 +7,15 @@
       font-weight: 700;
       font-size: 3.75rem;
       width: 700px;
-      span{
+      @include tablet{
+        width: 100%;
+        padding: 0 2rem 0 0;
+        font-size: 3rem;
+        span:nth-of-type(1){
+          display: block;
+        }
+      }
+      span:nth-of-type(2){
         display: block;
         color: $color-blue;
       }
@@ -17,6 +25,10 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.625rem;
+      @include tablet{
+        width: 100%;
+        padding: 0 2rem 0 0;
+      }
     }
   }
   &__cta{
@@ -45,10 +57,40 @@
     }
   }
 }
+@media screen and (max-height: 825px){
+  .discover .social{
+    display: none;
+  }
+  .service .social{
+    display: none;
+  }
+  .client .social{
+    display: none;
+  }
+}
+@include tablet{
+  .header .social{
+    bottom: -4rem;
+    left: 4rem;
+  }
+  .discover .social{
+    display: none;
+  }
+  .service .social{
+    display: none;
+  }
+  .client .social{
+    display: none;
+  }
+}
 .page__down{
   position: absolute;
   bottom: 2rem;
   right: 2rem;
+  @include tablet{
+    bottom: -5rem;
+    right: 4rem;
+  }
 }
 .client{
   .page__down{
