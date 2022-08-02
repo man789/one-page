@@ -6,14 +6,17 @@ $color-white: white;
 $color-blue: #41D1B9;
 $color-grey: #D5D9DC;
 $color-dark-bg: #171717;
-$color-grey-bg: #979797;
+$color-grey-bg: #F3F3F3;
+$color-grey-bg-dark: #1C1C1C;
 
 :root {
   --color-page-background: #{$color-white};
+  --color-page-background-grey: #{$color-grey-bg};
   --color-text: #{$color-black};
 }
 .dark {
   --color-page-background: #{$color-black};
+  --color-page-background-grey: #{$color-grey-bg-dark};
   --color-text: #{$color-white};
 }
 body {

@@ -6,14 +6,14 @@
       font-size: 3.125rem;
       font-weight: 700;
       margin: 0 0 10px 0;
-      @include tablet{
+      @include tabletLarge{
         font-size: 2.725rem;
       }
     }
     p{
       width: 430px;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.625rem;
       margin: 0 0 50px 0;
       @include tablet{
@@ -71,7 +71,7 @@
     }
     span{
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 300;
     }
   }
 }
@@ -111,17 +111,20 @@
     position: absolute;
     top: 1rem;
     right: -2rem;
-    width: 20px;
-    height: 20px;
+    width: 25px;
+    height: 25px;
     cursor: pointer;
+    background-color: var(--color-page-background);
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
     span{
-      width: 20px;
-      height: 2px;
+      width: 18px;
+      height: 1px;
       border: none;
       background-color: var(--color-text);
       display: block;
       position: absolute;
-      left: 0;
+      left: 2px;
       top: 50%;
       transform: translate(-50%, -50%);
     }
@@ -148,14 +151,14 @@
       font-size: 3.125rem;
       font-weight: 700;
       margin: 0 0 10px 0;
-      @include tablet{
+      @include tabletLarge{
         font-size: 2.725rem;
       }
     }
     p{
       width: 460px;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.625rem;
       margin: 0 0 50px 0;
       @include tablet{
@@ -167,19 +170,24 @@
 
 .service__content{
   display: grid;
-  grid-template-columns: repeat(3, minmax(250px, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
   @include laptop{
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include tabletLarge{
+    grid-template-columns: repeat(3, 1fr);
   }
   @include tablet{
-    grid-template-columns: repeat(1, minmax(250px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
   }
   &__box{
     h3{
       font-size: 1.875rem;
       font-weight: 600;
       margin-bottom: 20px;
+      @include tabletLarge{
+        font-size: 1.4rem;
+      }
       span{
         display: block;
       }
@@ -191,8 +199,11 @@
   display: flex;
   a{
     margin-right: 20px;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 0.875rem;
+    @include tabletLarge{
+      font-size: 0.7rem;
+    }
   }
 }
 // CTA Service
@@ -206,6 +217,9 @@
   height: fit-content;
   margin-top: 20px;
   background-color: transparent;
+  @include tabletLarge{
+    font-size: 0.8rem;
+  }
   &::before{
     content: 'View';
   }
@@ -229,6 +243,9 @@
   }
   &__title{
     margin-top: -50px;
+    @include laptop{
+      margin-top: 0;
+    }
     @include tablet{
       order: 1;
       margin-top: 0;
@@ -241,18 +258,20 @@
       justify-content: flex-end;
       align-items: flex-start;
       gap: 0.83rem;
-      @include tablet{
+      @include laptop{
         justify-content: flex-start;
+      }
+      @include tabletLarge{
         font-size: 2.725rem;
       }
     }
     p{
       width: 460px;
       font-size: 1rem;
-      font-weight: 400;
+      font-weight: 300;
       line-height: 1.625rem;
       margin: 0 0 50px auto;
-      @include tablet{
+      @include laptop{
         margin: 0;
         width: 100%;
       }
@@ -264,14 +283,22 @@
   grid-template-columns: repeat(6, 1fr);
   @include laptop{
     order: 2;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     div{
       display: flex;
       justify-content: center;
     }
   }
+  @include tabletLarge{
+    grid-template-columns: repeat(4, 1fr);
+    div{
+      img{
+        width: 80%;
+      }
+    }
+  }
   @include tablet{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

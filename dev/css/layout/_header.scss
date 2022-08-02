@@ -7,10 +7,12 @@
       font-weight: 700;
       font-size: 3.75rem;
       width: 700px;
-      @include tablet{
+      @include tabletLarge{
         width: 100%;
         padding: 0 2rem 0 0;
         font-size: 3rem;
+      }
+      @include tablet{
         span:nth-of-type(1){
           display: block;
         }
@@ -25,7 +27,7 @@
       font-size: 1rem;
       font-weight: 400;
       line-height: 1.625rem;
-      @include tablet{
+      @include tabletLarge{
         width: 100%;
         padding: 0 2rem 0 0;
       }
