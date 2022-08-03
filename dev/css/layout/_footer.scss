@@ -5,6 +5,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     display: grid;
+    grid-template-columns: 50% 25% 25%;
     grid-template-areas: "logo info contact"
     "social info contact";
     gap: 1rem;
@@ -28,6 +29,7 @@
     p:nth-of-type(2){
       display: flex;
       flex-direction: column;
+      margin-bottom: 0;
     }
     a{
       width: fit-content;
@@ -37,14 +39,17 @@
     grid-area: social;
     display: flex;
     gap: 1rem;
+    align-items: flex-end;
   }
   &__contact{
     grid-area: contact;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     div{
       display: flex;
       align-items: center;
       gap: 1rem;
-      margin-bottom: 1rem;
       img{
         width: 25px;
         height: 25px;

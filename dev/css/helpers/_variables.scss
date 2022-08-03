@@ -8,15 +8,20 @@ $color-grey: #D5D9DC;
 $color-dark-bg: #171717;
 $color-grey-bg: #F3F3F3;
 $color-grey-bg-dark: #1C1C1C;
+$color-boost: #ECECEC;
 
 :root {
   --color-page-background: #{$color-white};
   --color-page-background-grey: #{$color-grey-bg};
+  --color-page-background-boost: #{$color-boost};
+  --color-arrow: #{$color-dark-bg};
   --color-text: #{$color-black};
 }
 .dark {
   --color-page-background: #{$color-black};
   --color-page-background-grey: #{$color-grey-bg-dark};
+  --color-page-background-boost: #{$color-black};
+  --color-arrow: #{$color-grey-bg-dark};
   --color-text: #{$color-white};
 }
 body {

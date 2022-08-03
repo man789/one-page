@@ -19,16 +19,34 @@ let nav = document.querySelector('.main__nav');
 let logo = document.querySelector('.main__nav__logo');
 let link = document.querySelector('.main__nav__links');
 let lang = document.querySelector('.main__nav__lang');
-	burger.addEventListener('click', () =>{
-		nav.classList.toggle('nav--activ');
-		logo.classList.toggle('nav--activ');
-		link.classList.toggle('nav--activ');
-		lang.classList.toggle('nav--activ');
-		modalVideo.classList.remove('animationVideo');
-		video.innerHTML = ''
-	});
-
-// Image Light/Dark
+let links = document.querySelectorAll('.main__nav__link');
+burger.addEventListener('click', () =>{
+	nav.classList.toggle('nav--activ');
+	logo.classList.toggle('nav--activ');
+	link.classList.toggle('nav--activ');
+	lang.classList.toggle('nav--activ');
+	modalVideo.classList.remove('animationVideo');
+	video.innerHTML = '';
+});
+for (let i = 0; i < links.length; i++) {
+	links[i].classList.remove('link--activ');
+	if ((body.classList.contains('case') || (body.classList.contains('works'))) ) {
+		links[0].classList.add('link--activ');
+	}
+	if ((body.classList.contains('page-service')) ) {
+		links[1].classList.add('link--activ');
+	}
+	if ((body.classList.contains('team')) ) {
+		links[2].classList.add('link--activ');
+	}
+	if ((body.classList.contains('blog')) ) {
+		links[3].classList.add('link--activ');
+	}
+	if ((body.classList.contains('contact')) ) {
+		links[4].classList.add('link--activ');
+	}
+}
+// Logo Light/Dark
 let logoAltavia = document.querySelector('.logo__altavia');
 switchThemeBtn.addEventListener('click', () =>{
 	if (body.classList.contains('dark')) {

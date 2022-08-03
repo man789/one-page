@@ -4,7 +4,7 @@
   left: 0;
   width: 100%;
   height: 125px;
-  z-index: 5;
+  z-index: 11;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
@@ -20,6 +20,9 @@
     @include tablet{
       display: none;
     }
+  }
+  .link--activ{
+    color: $color-blue;
   }
   div:nth-of-type(3){
     margin-left: 6.25rem;
