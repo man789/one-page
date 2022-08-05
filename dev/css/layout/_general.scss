@@ -2,14 +2,53 @@
 .dark__light{
   position: fixed;
   top: 90px;
-  right: 2rem;
+  right: calc(2rem - (26px/2));
   cursor: pointer;
   z-index: 51;
+  transform: rotate(90deg);
   svg{
     width: fit-content;
     height: fit-content;
   }
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  i:nth-of-type(1){
+    display: flex;
+    align-items: center;
+  }
+  .checkbox-label {
+    background-color: var(--color-text);
+    width: 50px;
+    height: 26px;
+    border-radius: 50px;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include trans(.3s);
+  }
+  .checkbox-label .ball {
+    background-color: var(--color-page-background);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    transition: transform .3s linear;
+  }
+  
+  .checkbox:checked + .checkbox-label .ball {
+    transform: translateX(24px);
+  }
+  
 }
+
+
 
 // General
 body{

@@ -5,3 +5,36 @@
     padding-bottom: 50px;
   }
 }
+
+// Input Form
+.input-placeholder {
+  position: relative;
+  width: 50%;
+}
+.input-placeholder input {
+  padding: 10px 0;
+  font-size: 0.938rem;
+}
+//.input-placeholder input:valid + .placeholder {
+//  display: none;
+//}
+
+.placeholder {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  bottom: 0;
+  height: 25px;
+  font-size: 0.938rem;
+  font-weight: 100;
+  margin: 10px 0 0 0;
+  color: white;
+  display: flex;
+  width: 100%;
+}
+.placeholder span:nth-of-type(1) {
+  margin-right: auto;
+}
+.placeholder span:nth-of-type(2) {
+  color: $color_blue;
+}
