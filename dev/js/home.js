@@ -7,50 +7,6 @@ switchThemeBtn.addEventListener('click', () =>{
 		headerCta.src = headerCta.src.replace('header-cta-white', 'header-cta');
 	};
 });
-let instagram = document.querySelectorAll('.instagram');
-let facebook = document.querySelectorAll('.facebook');
-let linkedin = document.querySelectorAll('.linkedin');
-// function Social(name) {
-// 	for (let i = 0; i < name.length; i++) {
-// 		if (body.classList.contains('dark')) {
-// 			name[i].src = name[i].src.replace('name', 'name-dark');
-// 		}else{
-// 			name[i].src = name[i].src.replace('name-dark', 'name');
-// 		};
-// 	}
-// }
-// switchThemeBtn.addEventListener('click', () =>{
-// 	Social(instagram);
-// 	Social(facebook);
-// 	Social(linkedin);
-// });
-for (let i = 0; i < instagram.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			instagram[i].src = instagram[i].src.replace('instagram', 'instagram-dark');
-		}else{
-			instagram[i].src = instagram[i].src.replace('instagram-dark', 'instagram');
-		};
-	});
-}
-for (let i = 0; i < facebook.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			facebook[i].src = facebook[i].src.replace('facebook', 'facebook-dark');
-		}else{
-			facebook[i].src = facebook[i].src.replace('facebook-dark', 'facebook');
-		};
-	});
-}
-for (let i = 0; i < linkedin.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			linkedin[i].src = linkedin[i].src.replace('linkedin', 'linkedin-dark');
-		}else{
-			linkedin[i].src = linkedin[i].src.replace('linkedin-dark', 'linkedin');
-		};
-	});
-}
 let clientImg = document.querySelectorAll('.client__img');
 for (let i = 0; i < clientImg.length; i++) {
 	switchThemeBtn.addEventListener('click', () =>{
@@ -58,8 +14,8 @@ for (let i = 0; i < clientImg.length; i++) {
 			clientImg[i].src = clientImg[i].src.replace('light', 'dark');
 		}else{
 			clientImg[i].src = clientImg[i].src.replace('dark', 'light');
-		};
-	});
+		}
+	})
 }
 
 // Video Activation
@@ -113,5 +69,4 @@ for (let i = 0; i < anchorImg.length; i++) {
 			anchorImg[i].src = anchorImg[i].src.replace('page-down-white', 'page-down');
 		};
 	});
-}
-
+};

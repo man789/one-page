@@ -9,6 +9,12 @@
     grid-template-areas: "logo info contact"
     "social info contact";
     gap: 1rem;
+    @include tabletLarge{
+      grid-template-areas: 'logo social'
+      'info social'
+      'contact social';
+      grid-template-columns: 80% 20%;
+    }
   }
 }
 .footer{
@@ -40,12 +46,18 @@
     display: flex;
     gap: 1rem;
     align-items: flex-end;
+    @include tabletLarge{
+      flex-direction: column;
+    }
   }
   &__contact{
     grid-area: contact;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @include tabletLarge{
+      gap: 1rem;
+    }
     div{
       display: flex;
       align-items: center;

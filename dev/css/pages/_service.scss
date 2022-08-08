@@ -8,8 +8,14 @@
   position: relative;
   display: flex;
   margin-bottom: 4rem;
+  @include tabletLarge{
+    flex-direction: column;
+  }
   &__title{
     width: 50%;
+    @include tabletLarge{
+      width: 100%;
+    }
     h2{
       font-size: 3.125rem;
       font-weight: 700;
@@ -35,20 +41,32 @@
     display: flex;
     justify-content: flex-end;
     margin-right: 29px;
+    @include tabletLarge{
+      width: 100%;
+      justify-content: center;
+      margin: 0;
+    }
   }
 }
 .page-service__content{
   display: flex;
   gap: 4rem;
   padding: 5rem 0;
+  @include tabletLarge{
+    flex-direction: column;
+    padding: 5rem 2rem;
+  }
   &__box{
     width: calc(100% / 3);
+    @include tabletLarge{
+      width: 100%;
+    }
     h2{
       font-size: 1.875rem;
       line-height: 35px;
     }
     p{
-      width: 80%;
+      width: 90%;
       font-size: 1rem;
       line-height: 26px;
       font-weight: 300;

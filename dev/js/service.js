@@ -22,7 +22,15 @@ const swiperServiceCase = new Swiper('.swiperServiceCase', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  slidesPerView: 3,
+  slidesPerView: 1,
+  breakpoints: {
+    1366: {
+      slidesPerView: 3,
+    },
+    1028: {
+      slidesPerView: 2,
+    },
+  }
 });
 
 let arrowPrev = document.querySelector('.swiper-button-prev');
