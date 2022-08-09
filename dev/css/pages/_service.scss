@@ -114,15 +114,9 @@
     }
   }
 }
-.swiperServiceCase2{
+.swiper__case__bottom{
   display: none;
   @media screen and (max-width:1027px) {
     display: block;
-  }
-  .swiper-pagination-case2{
-    display: none;
-    @media screen and (max-width:1027px) {
-      display: flex;
-    }
   }
 }

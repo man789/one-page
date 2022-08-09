@@ -1,19 +1,23 @@
-// Light || Dark Theme Colors
+// Global Variable - Light || Dark Theme Colors
 let body = document.querySelector('.body');
-const switchThemeBtn = document.querySelector('#checkbox'); // Button Switch heme
-const logoAltavia = document.querySelector('.logo__altavia'); // Logo Light/Dark
-const logoAltaviaContact = document.querySelector('.logo__contact');
+const switchThemeBtn = document.querySelector('#checkbox');
+// -----------------------------------------
+// Logo Altavia - Light || Dark Theme Colors
+const logoAltavia = document.querySelectorAll('.logo__altavia');
 switchThemeBtn.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+	document.body.classList.toggle("dark");
 	if (body.classList.contains('dark')) {
-		logoAltavia.src = logoAltavia.src.replace('altavia-logo', 'altavia-logo-dark');
-		logoAltaviaContact.src = logoAltaviaContact.src.replace('altavia-logo', 'altavia-logo-dark');
+		for (let a = 0; a < logoAltavia.length; a++) {
+			logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo', 'altavia-logo-dark');
+		}	
 	}else{
-		logoAltavia.src = logoAltavia.src.replace('altavia-logo-dark', 'altavia-logo');
-		logoAltaviaContact.src = logoAltaviaContact.src.replace('altavia-logo-dark', 'altavia-logo');
+		for (let a = 0; a < logoAltavia.length; a++) {
+			logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo-dark', 'altavia-logo');
+		}
 	};
 });
-// Burger Nav
+// ------------------------
+// Navigation Burger Toggle
 let burger = document.querySelector('.nav__burger');
 let nav = document.querySelector('.main__nav');
 let logo = document.querySelector('.main__nav__logo');
@@ -31,6 +35,8 @@ burger.addEventListener('click', () =>{
 	modalVideo.classList.remove('animationVideo');
 	video.innerHTML = '';
 });
+// ----------------------
+// Active Page Link Style
 for (let i = 0; i < links.length; i++) {
 	links[i].classList.remove('link--activ');
 	if ((body.classList.contains('case') || (body.classList.contains('works'))) ) {
@@ -49,10 +55,11 @@ for (let i = 0; i < links.length; i++) {
 		links[4].classList.add('link--activ');
 	}
 }
+// -------------------------------------------
+// Socials Images - Light || Dark Theme Colors
 let instagram = document.querySelectorAll('.instagram');
 let facebook = document.querySelectorAll('.facebook');
 let linkedin = document.querySelectorAll('.linkedin');
-let mail = document.querySelector('.mail');
 for (let i = 0; i < instagram.length; i++) {
 	switchThemeBtn.addEventListener('click', () =>{
 		if (body.classList.contains('dark')) {
@@ -80,6 +87,22 @@ for (let i = 0; i < linkedin.length; i++) {
 		};
 	});
 }
+// const changeIcon = (social) => {
+//   for (let i = 0; i < social.length; i++) {
+//     switchThemeBtn.addEventListener('click', () => {
+//       if (body.classList.contains('dark')) {
+//         social[i].src = social[i].src.replace(`${social}`, `${social}-dark`);
+//       } else {
+//         social[i].src = social[i].src.replace(`${social}-dark`, `${social}`);
+//       }
+//     });
+//   }
+// };
+// changeIcon(facebook);
+// changeIcon(linkedin);
+// changeIcon(instagram);
+
+let mail = document.querySelector('.mail');
 switchThemeBtn.addEventListener('click', () =>{
 	if (body.classList.contains('dark')) {
 		mail.src = mail.src.replace('mail', 'mail-white');
@@ -87,4 +110,6 @@ switchThemeBtn.addEventListener('click', () =>{
 		mail.src = mail.src.replace('mail-white', 'mail');
 	};
 });
-
+// -------------------
+// Global - End Script
+// -------------------
