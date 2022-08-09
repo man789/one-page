@@ -39,7 +39,7 @@ const swiperCaseB = new Swiper('.swiperCaseB', {
   direction: 'horizontal',
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.swiper-pagination-case2',
     clickable: true,
   },
   // Navigation arrows

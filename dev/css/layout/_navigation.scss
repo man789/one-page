@@ -10,13 +10,16 @@
   align-items: center;
   font-weight: 600;
   background-color: var(--color-page-background);
-  div:nth-of-type(1){
+  >div:nth-of-type(1){
     margin-right: auto;
   }
-  div:nth-of-type(2){
+  >div:nth-of-type(2){
     display: flex;
     gap: 3.125rem;
     align-items: center;
+    @media screen and (max-width:870px){
+      gap: 2.5rem;
+    }
     @include tablet{
       display: none;
     }
@@ -24,8 +27,11 @@
   .link--activ{
     color: $color-blue;
   }
-  div:nth-of-type(3){
+  >div:nth-of-type(3){
     margin-left: 6.25rem;
+    @media screen and (max-width:820px){
+      margin-left: 3rem;
+    }
     @include tablet{
       display: none;
     }
@@ -33,19 +39,21 @@
   @include tablet{
     flex-direction: column;
     justify-content: space-between;
-    div:nth-of-type(1){
+    align-items: flex-start;
+    >div:nth-of-type(1){
       height: calc(125px - 2rem);
       display: flex;
       align-items: center;
     }
-    div:nth-of-type(2).nav--activ{
+    >div:nth-of-type(2).nav--activ{
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
-    div:nth-of-type(3).nav--activ{
+    >div:nth-of-type(3).nav--activ{
       display: block;
       margin: 0;
-      align-self: flex-start;
+      align-self: flex-end;
     }
   }
 }
@@ -95,7 +103,9 @@
 }
 
 // Burger Menu
-.nav__burger{display: none;}
+.nav__burger{
+  display: none;
+}
 @include tablet{
   .nav__burger{
     position: fixed;
@@ -116,19 +126,49 @@
       background-color: var(--color-text);
       @include trans(.3s);
     }
-    &:hover{
-      align-items: center;
-      span:nth-of-type(1){
-        width: calc(25px/2);
-        background-color: $color-blue;
-      }
-      span:nth-of-type(2){
-        width: 20px;
-      }
-      span:nth-of-type(3){
-        width: calc(25px/2);
-        background-color: $color-blue;
-      }
+    span:nth-of-type(2){
+      @include trans(.2s);
+    }
+    // &:hover{
+    //   align-items: center;
+    //   span:nth-of-type(1){
+    //     width: calc(25px/2);
+    //     background-color: $color-blue;
+    //   }
+    //   span:nth-of-type(2){
+    //     width: 20px;
+    //   }
+    //   span:nth-of-type(3){
+    //     width: calc(25px/2);
+    //     background-color: $color-blue;
+    //   }
+    // }
+  }
+  .nav__burger.nav--activ{
+    span:nth-of-type(2){
+      opacity: 0;
+    }
+    span:nth-of-type(1){
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) rotate(45deg);
+    }
+    span:nth-of-type(3){
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%) rotate(-45deg);
     }
   }
+}
+.main__nav__social{
+  display: none;
+}
+.main__nav__social.nav--activ{
+  display: flex;
+  position: fixed;
+  gap: 2rem;
+  bottom: 1rem;
+  left: 2rem;
 }

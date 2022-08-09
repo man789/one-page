@@ -20,11 +20,14 @@ let logo = document.querySelector('.main__nav__logo');
 let link = document.querySelector('.main__nav__links');
 let lang = document.querySelector('.main__nav__lang');
 let links = document.querySelectorAll('.main__nav__link');
+let navSocial = document.querySelector('.main__nav__social');
 burger.addEventListener('click', () =>{
 	nav.classList.toggle('nav--activ');
 	logo.classList.toggle('nav--activ');
 	link.classList.toggle('nav--activ');
 	lang.classList.toggle('nav--activ');
+	navSocial.classList.toggle('nav--activ');
+	burger.classList.toggle('nav--activ');
 	modalVideo.classList.remove('animationVideo');
 	video.innerHTML = '';
 });

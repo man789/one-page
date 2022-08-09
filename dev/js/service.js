@@ -32,19 +32,53 @@ const swiperServiceCase = new Swiper('.swiperServiceCase', {
     },
   }
 });
-
-let arrowPrev = document.querySelector('.swiper-button-prev');
-let arrowNext = document.querySelector('.swiper-button-next');
-function DisplayArrow(){
-  if (arrowPrev.classList.contains('swiper-button-disabled')) {
-    arrowPrev.style.display = 'none'
-  }else{
-    arrowPrev.style.display = 'flex'
+// Swiper JS Case 
+const swiperServiceCase2 = new Swiper('.swiperServiceCase2', {
+  // Optional parameters
+  direction: 'horizontal',
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination-case2',
+    clickable: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  slidesPerView: 1,
+  breakpoints: {
+    1366: {
+      slidesPerView: 3,
+    },
+    1028: {
+      slidesPerView: 2,
+    },
   }
-  if (arrowNext.classList.contains('swiper-button-disabled')) {
-    arrowNext.style.display = 'none'
-  }else{
-    arrowNext.style.display = 'flex'
+});
+
+// Arrow Light || Dark
+let arrowPrev = document.querySelectorAll('.swiper-button-prev');
+let arrowNext = document.querySelectorAll('.swiper-button-next');
+for (let i = 0; i < arrowPrev.length; i++) {
+  switchThemeBtn.addEventListener('click', () =>{
+    arrowPrev[i].classList.toggle('arrow-dark');
+    arrowNext[i].classList.toggle('arrow-dark');
+  });
+};
+// Arrow Display Access
+function DisplayArrow(){
+  for (let index = 0; index < arrowPrev.length; index++) {
+    if (arrowPrev[index].classList.contains('swiper-button-disabled')) {
+      arrowPrev[index].style.display = 'none'
+    }else{
+      arrowPrev[index].style.display = 'flex'
+    }
+    if (arrowNext[index].classList.contains('swiper-button-disabled')) {
+      arrowNext[index].style.display = 'none'
+    }else{
+      arrowNext[index].style.display = 'flex'
+    }
   }
 }
 window.addEventListener('click', () =>{
@@ -52,9 +86,4 @@ window.addEventListener('click', () =>{
 });
 window.addEventListener('load', () =>{
   DisplayArrow();
-});
-// Arrow Light || Dark
-switchThemeBtn.addEventListener('click', () =>{
-  arrowPrev.classList.toggle('arrow-dark');
-  arrowNext.classList.toggle('arrow-dark');
 });

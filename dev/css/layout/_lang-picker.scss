@@ -1,0 +1,28 @@
+select{
+  // A reset of styles, including removing the default dropdown arrow
+  appearance: none;
+  // Additional resets for further consistency
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+}
+.main__nav__lang{
+  select{
+    width: fit-content;
+    padding: 0;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: var(--color-page-background);
+    color: var(--color-text);
+  }
+  #langToggle{
+    text-align: center;
+  }
+}

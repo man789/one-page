@@ -43,7 +43,7 @@
     margin-right: 29px;
     @include tabletLarge{
       width: 100%;
-      justify-content: center;
+      justify-content: flex-start;
       margin: 0;
     }
   }
@@ -111,6 +111,18 @@
       color: $color-blue;
       font-weight: 700;
       display: block;
+    }
+  }
+}
+.swiperServiceCase2{
+  display: none;
+  @media screen and (max-width:1027px) {
+    display: block;
+  }
+  .swiper-pagination-case2{
+    display: none;
+    @media screen and (max-width:1027px) {
+      display: flex;
     }
   }
 }
