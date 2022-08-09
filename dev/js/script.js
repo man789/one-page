@@ -60,47 +60,50 @@ for (let i = 0; i < links.length; i++) {
 let instagram = document.querySelectorAll('.instagram');
 let facebook = document.querySelectorAll('.facebook');
 let linkedin = document.querySelectorAll('.linkedin');
-for (let i = 0; i < instagram.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			instagram[i].src = instagram[i].src.replace('instagram', 'instagram-dark');
-		}else{
-			instagram[i].src = instagram[i].src.replace('instagram-dark', 'instagram');
-		};
-	});
-}
-for (let i = 0; i < facebook.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			facebook[i].src = facebook[i].src.replace('facebook', 'facebook-dark');
-		}else{
-			facebook[i].src = facebook[i].src.replace('facebook-dark', 'facebook');
-		};
-	});
-}
-for (let i = 0; i < linkedin.length; i++) {
-	switchThemeBtn.addEventListener('click', () =>{
-		if (body.classList.contains('dark')) {
-			linkedin[i].src = linkedin[i].src.replace('linkedin', 'linkedin-dark');
-		}else{
-			linkedin[i].src = linkedin[i].src.replace('linkedin-dark', 'linkedin');
-		};
-	});
-}
-// const changeIcon = (social) => {
-//   for (let i = 0; i < social.length; i++) {
-//     switchThemeBtn.addEventListener('click', () => {
-//       if (body.classList.contains('dark')) {
-//         social[i].src = social[i].src.replace(`${social}`, `${social}-dark`);
-//       } else {
-//         social[i].src = social[i].src.replace(`${social}-dark`, `${social}`);
-//       }
-//     });
-//   }
-// };
-// changeIcon(facebook);
-// changeIcon(linkedin);
-// changeIcon(instagram);
+const changeImage = (social) => {
+  if (body.classList.contains('dark')) {
+    social.forEach((img) => {
+      img.src = `img/${img.className}-dark.svg`;
+    });
+  } else {
+    social.forEach((img) => {
+      img.src = `img/${img.className}.svg`;
+    });
+  }
+};
+switchThemeBtn.addEventListener('click', () => {
+  changeImage(instagram);
+  changeImage(facebook);
+  changeImage(linkedin);
+});
+// for (let i = 0; i < instagram.length; i++) {
+// 	switchThemeBtn.addEventListener('click', () =>{
+// 		if (body.classList.contains('dark')) {
+// 			instagram[i].src = instagram[i].src.replace('instagram', 'instagram-dark');
+// 		}else{
+// 			instagram[i].src = instagram[i].src.replace('instagram-dark', 'instagram');
+// 		};
+// 	});
+// }
+// for (let i = 0; i < facebook.length; i++) {
+// 	switchThemeBtn.addEventListener('click', () =>{
+// 		if (body.classList.contains('dark')) {
+// 			facebook[i].src = facebook[i].src.replace('facebook', 'facebook-dark');
+// 		}else{
+// 			facebook[i].src = facebook[i].src.replace('facebook-dark', 'facebook');
+// 		};
+// 	});
+// }
+// for (let i = 0; i < linkedin.length; i++) {
+// 	switchThemeBtn.addEventListener('click', () =>{
+// 		if (body.classList.contains('dark')) {
+// 			linkedin[i].src = linkedin[i].src.replace('linkedin', 'linkedin-dark');
+// 		}else{
+// 			linkedin[i].src = linkedin[i].src.replace('linkedin-dark', 'linkedin');
+// 		};
+// 	});
+// }
+
 
 let mail = document.querySelector('.mail');
 switchThemeBtn.addEventListener('click', () =>{
