@@ -118,21 +118,20 @@
     border: 1px solid var(--color-text);
     border-radius: 50%;
     span{
-      width: 18px;
-      height: 1px;
+      width: 15px;
+      height: 2px;
       border: none;
       background-color: var(--color-text);
       display: block;
       position: absolute;
-      left: 2px;
+      left: 50%;
       top: 50%;
-      transform: translate(-50%, -50%);
     }
     span:nth-of-type(odd){
-      transform: rotate(45deg);
+      transform: translate(-50%, -50%) rotate(45deg);
     }
     span:nth-of-type(even){
-      transform: rotate(-45deg);
+      transform: translate(-50%, -50%) rotate(-45deg);
     }
   }
 }

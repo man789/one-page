@@ -50,7 +50,7 @@
 // Color Selection
 ::selection {
   background: $color-blue;
-  color:$color-black;
+  color:var(--color-text);
 }
 // General
 body{

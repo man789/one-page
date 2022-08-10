@@ -1,13 +1,3 @@
-// Home Page - CTA Video - Light || Dark Theme Colors
-// let headerCta = document.querySelector('.header--cta');
-// switchThemeBtn.addEventListener('click', () =>{
-// 	if (body.classList.contains('dark')) {
-// 		headerCta.src = headerCta.src.replace('header-cta', 'header-cta-white');
-// 	}else{
-// 		headerCta.src = headerCta.src.replace('header-cta-white', 'header-cta');
-// 	};
-// });
-// ----------------
 // Video Activation
 let btnVideo = document.querySelector('.header__cta');
 let modalVideo = document.querySelector('.header__video');
@@ -31,7 +21,15 @@ for (let i = 0; i < clientImg.length; i++) {
 		}else{
 			clientImg[i].src = clientImg[i].src.replace('dark', 'light');
 		}
-	})
+	});
+	// Prevent error whith Switch Theme LocalStorage
+	window.addEventListener('load', () =>{
+		if (body.classList.contains('dark')) {
+			clientImg[i].src = clientImg[i].src.replace('light', 'dark');
+		}else{
+			clientImg[i].src = clientImg[i].src.replace('dark', 'light');
+		}
+	});
 }
 // --------------
 // Anchors Rename
@@ -55,18 +53,6 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', () => {
 	AnchorsRename();
 });
-// ------------------------------------------
-// Anchors Image - Light || Dark Theme Colors
-// let anchorImg = document.querySelectorAll('.anchor--img');
-// for (let i = 0; i < anchorImg.length; i++) {
-// 	switchThemeBtn.addEventListener('click', () =>{
-// 		if (body.classList.contains('dark')) {
-// 			anchorImg[i].src = anchorImg[i].src.replace('page-down', 'page-down-white');
-// 		}else{
-// 			anchorImg[i].src = anchorImg[i].src.replace('page-down-white', 'page-down');
-// 		};
-// 	});
-// };
 // ----------------------
 // Home Page - End Script
 // ----------------------

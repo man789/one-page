@@ -1,20 +1,23 @@
 // Global Variable - Light || Dark Theme Colors
 let body = document.querySelector('.body');
 const switchThemeBtn = document.querySelector('#checkbox');
-// -----------------------------------------
-// Logo Altavia - Light || Dark Theme Colors
-const logoAltavia = document.querySelectorAll('.logo__altavia');
+let myThemeActiv = localStorage.getItem('themeColor');
+if (myThemeActiv === 'dark-theme') {
+	body.classList.add('dark');
+	switchThemeBtn.checked = true;
+}
+if (myThemeActiv === 'light-theme') {
+	body.classList.remove('dark');
+	switchThemeBtn.checked = false;
+}
 switchThemeBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark");
-	// if (body.classList.contains('dark')) {
-	// 	for (let a = 0; a < logoAltavia.length; a++) {
-	// 		logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo', 'altavia-logo-dark');
-	// 	}	
-	// }else{
-	// 	for (let a = 0; a < logoAltavia.length; a++) {
-	// 		logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo-dark', 'altavia-logo');
-	// 	}
-	// };
+	if (body.classList.contains('dark')) {
+		localStorage.setItem('themeColor', 'dark-theme');
+	}
+	if(!body.classList.contains('dark')){
+		localStorage.setItem('themeColor', 'light-theme');
+	}
 });
 // ------------------------
 // Navigation Burger Toggle
@@ -55,36 +58,6 @@ for (let i = 0; i < links.length; i++) {
 		links[4].classList.add('link--activ');
 	}
 }
-// -------------------------------------------
-// Socials Images - Light || Dark Theme Colors
-// let instagram = document.querySelectorAll('.instagram');
-// let facebook = document.querySelectorAll('.facebook');
-// let linkedin = document.querySelectorAll('.linkedin');
-// const changeImage = (social) => {
-//   if (body.classList.contains('dark')) {
-//     social.forEach((img) => {
-//       img.src = `img/${img.className}-dark.svg`;
-//     });
-//   } else {
-//     social.forEach((img) => {
-//       img.src = `img/${img.className}.svg`;
-//     });
-//   }
-// };
-// switchThemeBtn.addEventListener('click', () => {
-//   changeImage(instagram);
-//   changeImage(facebook);
-//   changeImage(linkedin);
-// });
-
-// let mail = document.querySelector('.mail');
-// switchThemeBtn.addEventListener('click', () =>{
-// 	if (body.classList.contains('dark')) {
-// 		mail.src = mail.src.replace('mail', 'mail-white');
-// 	}else{
-// 		mail.src = mail.src.replace('mail-white', 'mail');
-// 	};
-// });
 // -------------------
 // Global - End Script
 // -------------------
