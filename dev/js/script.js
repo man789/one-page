@@ -6,15 +6,15 @@ const switchThemeBtn = document.querySelector('#checkbox');
 const logoAltavia = document.querySelectorAll('.logo__altavia');
 switchThemeBtn.addEventListener("click", () => {
 	document.body.classList.toggle("dark");
-	if (body.classList.contains('dark')) {
-		for (let a = 0; a < logoAltavia.length; a++) {
-			logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo', 'altavia-logo-dark');
-		}	
-	}else{
-		for (let a = 0; a < logoAltavia.length; a++) {
-			logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo-dark', 'altavia-logo');
-		}
-	};
+	// if (body.classList.contains('dark')) {
+	// 	for (let a = 0; a < logoAltavia.length; a++) {
+	// 		logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo', 'altavia-logo-dark');
+	// 	}	
+	// }else{
+	// 	for (let a = 0; a < logoAltavia.length; a++) {
+	// 		logoAltavia[a].src = logoAltavia[a].src.replace('altavia-logo-dark', 'altavia-logo');
+	// 	}
+	// };
 });
 // ------------------------
 // Navigation Burger Toggle
@@ -57,62 +57,34 @@ for (let i = 0; i < links.length; i++) {
 }
 // -------------------------------------------
 // Socials Images - Light || Dark Theme Colors
-let instagram = document.querySelectorAll('.instagram');
-let facebook = document.querySelectorAll('.facebook');
-let linkedin = document.querySelectorAll('.linkedin');
-const changeImage = (social) => {
-  if (body.classList.contains('dark')) {
-    social.forEach((img) => {
-      img.src = `img/${img.className}-dark.svg`;
-    });
-  } else {
-    social.forEach((img) => {
-      img.src = `img/${img.className}.svg`;
-    });
-  }
-};
-switchThemeBtn.addEventListener('click', () => {
-  changeImage(instagram);
-  changeImage(facebook);
-  changeImage(linkedin);
-});
-// for (let i = 0; i < instagram.length; i++) {
-// 	switchThemeBtn.addEventListener('click', () =>{
-// 		if (body.classList.contains('dark')) {
-// 			instagram[i].src = instagram[i].src.replace('instagram', 'instagram-dark');
-// 		}else{
-// 			instagram[i].src = instagram[i].src.replace('instagram-dark', 'instagram');
-// 		};
-// 	});
-// }
-// for (let i = 0; i < facebook.length; i++) {
-// 	switchThemeBtn.addEventListener('click', () =>{
-// 		if (body.classList.contains('dark')) {
-// 			facebook[i].src = facebook[i].src.replace('facebook', 'facebook-dark');
-// 		}else{
-// 			facebook[i].src = facebook[i].src.replace('facebook-dark', 'facebook');
-// 		};
-// 	});
-// }
-// for (let i = 0; i < linkedin.length; i++) {
-// 	switchThemeBtn.addEventListener('click', () =>{
-// 		if (body.classList.contains('dark')) {
-// 			linkedin[i].src = linkedin[i].src.replace('linkedin', 'linkedin-dark');
-// 		}else{
-// 			linkedin[i].src = linkedin[i].src.replace('linkedin-dark', 'linkedin');
-// 		};
-// 	});
-// }
+// let instagram = document.querySelectorAll('.instagram');
+// let facebook = document.querySelectorAll('.facebook');
+// let linkedin = document.querySelectorAll('.linkedin');
+// const changeImage = (social) => {
+//   if (body.classList.contains('dark')) {
+//     social.forEach((img) => {
+//       img.src = `img/${img.className}-dark.svg`;
+//     });
+//   } else {
+//     social.forEach((img) => {
+//       img.src = `img/${img.className}.svg`;
+//     });
+//   }
+// };
+// switchThemeBtn.addEventListener('click', () => {
+//   changeImage(instagram);
+//   changeImage(facebook);
+//   changeImage(linkedin);
+// });
 
-
-let mail = document.querySelector('.mail');
-switchThemeBtn.addEventListener('click', () =>{
-	if (body.classList.contains('dark')) {
-		mail.src = mail.src.replace('mail', 'mail-white');
-	}else{
-		mail.src = mail.src.replace('mail-white', 'mail');
-	};
-});
+// let mail = document.querySelector('.mail');
+// switchThemeBtn.addEventListener('click', () =>{
+// 	if (body.classList.contains('dark')) {
+// 		mail.src = mail.src.replace('mail', 'mail-white');
+// 	}else{
+// 		mail.src = mail.src.replace('mail-white', 'mail');
+// 	};
+// });
 // -------------------
 // Global - End Script
 // -------------------

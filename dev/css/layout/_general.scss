@@ -47,9 +47,11 @@
   }
   
 }
-
-
-
+// Color Selection
+::selection {
+  background: $color-blue;
+  color:$color-black;
+}
 // General
 body{
   font-family: $altavia-font;
@@ -70,5 +72,14 @@ a{
   @include trans(.3s);
 }
 .color-blue{
-  color: #41D1B9;
+  color: $color-blue;
+}
+.light-img{
+  fill: var(--color-text);
+}
+.dark-img{
+  fill: var(--color-page-background);
+}
+.light-circle{
+  stroke: var(--color-text);
 }
