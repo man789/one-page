@@ -87,6 +87,13 @@
       width: 8px;
       height: 10px;
       transform: rotate(180deg);
+      @media screen and (max-width:550px){
+        width: 5px;
+        height: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
   }
   .swiper-button-next{
@@ -95,11 +102,18 @@
       background: url('../img/case/arrow.png');
       width: 8px;
       height: 10px;
+      @media screen and (max-width:550px){
+        width: 5px;
+        height: 8px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     }
   }
   .arrow-dark{
     &::after{
-      background: url('../img/case/arrow-white.svg');
+      background: url('../img/case/arrow-white.svg') no-repeat center/contain;
     }
   }
   .swiper-pagination{
@@ -271,6 +285,21 @@
       opacity: 0.4;
       justify-content: flex-start;
       padding-left: 0;
+    }
+  }
+  @media screen and (max-width:550px){
+    .swiper-slide-next{
+      padding-left: 4rem;
+    }
+    .swiper-button-prev {
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--color-text);
+    }
+    .swiper-button-next {
+      width: 20px;
+      height: 20px;
+      border: 1px solid var(--color-text);
     }
   }
   .swiper-slide-prev{

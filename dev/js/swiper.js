@@ -176,6 +176,9 @@ window.addEventListener('click', () =>{
 window.addEventListener('load', () =>{
   DisplayArrow();
 });
+window.addEventListener('mousemove', () =>{
+  DisplayArrow();
+});
 // -------------------
 // Swiper - End Script
 // -------------------
