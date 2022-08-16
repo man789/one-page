@@ -142,7 +142,18 @@ for (let i = 0; i < arrowPrev.length; i++) {
     arrowPrev[i].classList.toggle('arrow-dark');
     arrowNext[i].classList.toggle('arrow-dark');
   });
+  window.addEventListener('load', () =>{
+    if (body.classList.contains('dark')) {
+      arrowPrev[i].classList.add('arrow-dark');
+      arrowNext[i].classList.add('arrow-dark');
+    }
+    if(!body.classList.contains('dark')){
+      arrowPrev[i].classList.remove('arrow-dark');
+      arrowNext[i].classList.remove('arrow-dark');
+    }
+  })
 };
+
 // ----------------------
 // Swiper - Arrow Display
 function DisplayArrow(){

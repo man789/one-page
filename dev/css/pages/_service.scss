@@ -58,6 +58,7 @@
   }
   &__box{
     width: calc(100% / 3);
+    padding: 0 0 0 2rem;
     @include tabletLarge{
       width: 100%;
     }
